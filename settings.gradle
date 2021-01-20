@@ -1,2 +1,5 @@
+include ':User_'
+include ':Provider'
+include ':BaseLinbrary'
 include ':app'
 rootProject.name = "shopping"
