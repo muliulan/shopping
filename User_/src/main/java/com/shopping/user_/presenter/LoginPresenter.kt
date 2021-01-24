@@ -22,8 +22,11 @@ class LoginPresenter @Inject constructor() : BasePresenter<LoginView>() {
 
 
     fun login(a: String, b: String) {
+        if(!checkNetWork()){
+            return
+        }
         loginServiceImpl.register(a, b)
-            .execute(object : BaseSubscriber<Boolean>() {
+            .execute(object : BaseSubscriber<Boolean>(mView) {
                 override fun onNext(t: Boolean) {
                     super.onNext(t)
                     mView.loginOk(if (t) "注册成功" else "失败")

@@ -1,10 +1,9 @@
 package com.shopping.baselinbrary.base.fragment
 
 import android.os.Bundle
-import com.shopping.baselinbrary.BaseApplication
+import com.shopping.baselinbrary.common.BaseApplication
 import com.shopping.baselinbrary.base.BasePresenter
 import com.shopping.baselinbrary.base.BaseView
-import com.shopping.baselinbrary.base.activity.BaseActivity
 import com.shopping.baselinbrary.injection.component.ActivityComponent
 import com.shopping.baselinbrary.injection.component.DaggerActivityComponent
 import com.shopping.baselinbrary.injection.module.ActivityModule

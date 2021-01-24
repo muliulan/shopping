@@ -1,7 +1,7 @@
 package com.shopping.baselinbrary.injection.module
 
 import android.content.Context
-import com.shopping.baselinbrary.BaseApplication
+import com.shopping.baselinbrary.common.BaseApplication
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton

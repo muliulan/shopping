@@ -1,4 +1,4 @@
-package com.shopping.baselinbrary
+package com.shopping.baselinbrary.common
 
 import android.app.Application
 import com.shopping.baselinbrary.injection.component.AppComponent
