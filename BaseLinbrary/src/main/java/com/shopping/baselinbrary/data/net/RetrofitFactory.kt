@@ -41,16 +41,16 @@ class RetrofitFactory private constructor() {
 
     private fun initClient(): OkHttpClient {
 
-        return OkHttpClient.Builder().addInterceptor(initLog()).addInterceptor(interceptor)
+        return OkHttpClient.Builder().addInterceptor(LogInterceptor()).addInterceptor(interceptor)
             .connectTimeout(10, TimeUnit.SECONDS)
             .readTimeout(10, TimeUnit.SECONDS).build()
     }
 
-    private fun initLog(): Interceptor {
-        val httpLoggingInterceptor = HttpLoggingInterceptor()
-        httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
-        return httpLoggingInterceptor
-    }
+//    private fun initLog(): Interceptor {
+//        val httpLoggingInterceptor = HttpLoggingInterceptor()
+//        httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
+//        return httpLoggingInterceptor
+//    }
 
     fun <T> create(service: Class<T>): T {
         return retrofit.create(service)

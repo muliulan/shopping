@@ -1,5 +1,8 @@
 package com.shopping.baselinbrary.base
 
+import com.trello.rxlifecycle.LifecycleProvider
+import javax.inject.Inject
+
 /**
 描述:
 zhaochenshuo
@@ -9,5 +12,8 @@ zhaochenshuo
 open class BasePresenter<T:BaseView> {
 
     lateinit var mView: T
+
+    @Inject
+    lateinit var lifecycleProvider: LifecycleProvider<*>
 
 }

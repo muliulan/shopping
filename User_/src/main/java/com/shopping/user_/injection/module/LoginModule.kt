@@ -14,7 +14,7 @@ zhaochenshuo
 class LoginModule {
 
     @Provides
-    fun providesUserService(service: LoginServiceImpl):LoginService{
+    fun providesUserService(service: LoginService):LoginService{
         return service
     }
 

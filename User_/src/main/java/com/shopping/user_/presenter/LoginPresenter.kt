@@ -20,6 +20,7 @@ class LoginPresenter @Inject constructor() : BasePresenter<LoginView>() {
     @Inject
     lateinit var loginServiceImpl: LoginServiceImpl
 
+
     fun login(a: String, b: String) {
         loginServiceImpl.register(a, b)
             .execute(object : BaseSubscriber<Boolean>() {
@@ -27,7 +28,7 @@ class LoginPresenter @Inject constructor() : BasePresenter<LoginView>() {
                     super.onNext(t)
                     mView.loginOk(if (t) "注册成功" else "失败")
                 }
-            })
+            },lifecycleProvider)
 //        mView.loginOk("注册成功")
     }
 }
